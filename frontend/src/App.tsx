@@ -55,15 +55,7 @@ export default function App() {
     <div style={{ maxWidth: 900, margin: '24px auto', padding: 16 }}>
       <h2>Weather Fetcher</h2>
       <div style={{ display: 'grid', gap: 12, gridTemplateColumns: '1fr' }}>
-        <label>
-          Provider
-          <select value={provider} onChange={(e) => setProvider(e.target.value)} style={{ marginLeft: 8 }}>
-            <option value="openmeteo">Open‑Meteo (no key)</option>
-            <option value="openweather">OpenWeather</option>
-            <option value="accuweather">AccuWeather</option>
-            <option value="weatherapi">WeatherAPI</option>
-          </select>
-        </label>
+        {/* Provider selection hidden as requested; defaulting to Open‑Meteo */}
         <label>
           Coordinates (one per line, lat,lon)
           <textarea
@@ -87,29 +79,23 @@ export default function App() {
           <table>
             <thead>
               <tr>
-                <th>Provider</th>
-                <th>Lat</th>
-                <th>Lon</th>
                 <th>T (°C)</th>
                 <th>Hum (%)</th>
                 <th>Press (hPa)</th>
                 <th>Wind (m/s)</th>
                 <th>Dir (°)</th>
-                <th>Condition</th>
+                
               </tr>
             </thead>
             <tbody>
               {readings.map((r, idx) => (
                 <tr key={idx}>
-                  <td>{r.provider}</td>
-                  <td>{r.latitude}</td>
-                  <td>{r.longitude}</td>
                   <td>{r.temperature_c ?? ''}</td>
                   <td>{r.humidity_pct ?? ''}</td>
                   <td>{r.pressure_hpa ?? ''}</td>
                   <td>{r.wind_speed_ms ?? ''}</td>
                   <td>{r.wind_direction_deg ?? ''}</td>
-                  <td>{r.condition_text ?? ''}</td>
+                  
                 </tr>
               ))}
             </tbody>
