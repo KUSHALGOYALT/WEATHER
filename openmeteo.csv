@@ -1,0 +1,3 @@
+provider,latitude,longitude,observed_at_unix,temperature_c,temperature_f,humidity_pct,pressure_hpa,wind_speed_ms,wind_direction_deg,condition_code,condition_text
+openmeteo,37.7749,-122.4194,,17.6,63.68,87,1014.7,2.7,182,,
+openmeteo,40.7128,-74.006,,25.0,77.0,71,1017.0,0.32,342,,
