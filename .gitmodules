@@ -1,0 +1,3 @@
+[submodule "external/dataset-repository"]
+	path = external/dataset-repository
+	url = https://github.com/Hexa-Climate/dataset-repository.git
